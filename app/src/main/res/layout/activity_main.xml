@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sharp Overlay"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Прототип для замера задержки. Выбери режим и запусти."
+        android:textSize="14sp"
+        android:layout_marginBottom="24dp"/>
+
+    <RadioGroup
+        android:id="@+id/modeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/radioCas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CAS (адаптивная резкость)"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioRcas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RCAS (устойчивая к ореолам)"/>
+
+        <RadioButton
+            android:id="@+id/radioDynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dynamic Sharp (минимальная нагрузка)"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/sharpnessLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Интенсивность: 50%"
+        android:layout_marginBottom="4dp"/>
+
+    <SeekBar
+        android:id="@+id/sharpnessSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="50"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Запросить overlay-разрешение"/>
+
+    <Button
+        android:id="@+id/btnCapture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Запустить захват экрана + фильтр"/>
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Остановить"/>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Статус: ожидание"/>
+
+</LinearLayout>
